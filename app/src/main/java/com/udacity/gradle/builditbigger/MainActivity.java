@@ -1,9 +1,11 @@
 package com.udacity.gradle.builditbigger;
 
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Pair;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -30,6 +32,7 @@ public class MainActivity extends ActionBarActivity {
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
+
     }
 
 
@@ -56,9 +59,8 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void tellJoke(View view) {
-        Intent downloadIntent = new Intent(this, JokeDisplayAvtivity.class);
-        downloadIntent.putExtra(JokeDisplayAvtivity.JOKE_INTENT_STRING, JokeProvider.getRandomJoke());
-        startActivity(downloadIntent);
+        new EndpointsAsyncTask().execute((Runnable) new Pair<Context, String>(this, "Manfred"));
+
         // Toast.makeText(this, JokeProvider.getRandomJoke(), Toast.LENGTH_SHORT).show();
     }
 
