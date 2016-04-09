@@ -42,18 +42,8 @@ dependencies {
     // Added for AdMob
     compile project(':joketeller')
     compile project(':jokedisplayer')
-    //  compile 'com.android.support:appcompat-v7:23.0.0-alpha1'
-//  compile 'com.google.android.gms:play-services:8.4.0'
     compile 'com.google.android.gms:play-services-base:8.4.0'
     compile 'com.google.android.gms:play-services-ads:8.4.0'
     compile 'com.google.android.gms:play-services-appindexing:8.4.0'
-    //  compile('com.google.appengine:appengine-endpoints:1.9.18') {
-    //     exclude module: 'appengine-endpoints'
-    //}
     compile project(path: ':backend', configuration: 'android-endpoints')
-    //compile project(':backend')
-    //{
-    //exclude module: 'appengine-endpoints'
-    // }
-    // compile 'com.google.appengine:appengine-endpoints:1.9.18'
 }
