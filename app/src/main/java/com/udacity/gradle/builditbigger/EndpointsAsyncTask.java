@@ -3,6 +3,7 @@ package com.udacity.gradle.builditbigger;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.support.v4.util.Pair;
 
 import com.chmaurer.builditbigger.jokedisplayer.JokeDisplayAvtivity;
 import com.example.JokeProvider;
@@ -11,7 +12,6 @@ import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.extensions.android.json.AndroidJsonFactory;
 import com.google.api.client.googleapis.services.AbstractGoogleClientRequest;
 import com.google.api.client.googleapis.services.GoogleClientRequestInitializer;
-import com.google.appengine.repackaged.com.google.common.base.Pair;
 
 import java.io.IOException;
 
