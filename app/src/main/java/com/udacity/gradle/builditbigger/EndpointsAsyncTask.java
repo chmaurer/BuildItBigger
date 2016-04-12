@@ -22,7 +22,24 @@ import java.io.IOException;
 public class EndpointsAsyncTask extends AsyncTask<Pair<Context, String>, Void, String> {
     private static MyApi myApiService = null;
     private Context context;
+    private String joke;
+    private boolean testing;
 
+    public EndpointsAsyncTask() {
+        testing = false;
+    }
+
+    public EndpointsAsyncTask(boolean testMode) {
+        testing = testMode;
+    }
+
+    public String getJoke() {
+        return joke;
+    }
+
+    public void setJoke(String joke) {
+        this.joke = joke;
+    }
 
     @Override
     protected String doInBackground(Pair<Context, String>... params) {
@@ -45,7 +62,6 @@ public class EndpointsAsyncTask extends AsyncTask<Pair<Context, String>, Void, S
         }
 
         context = params[0].first;
-        String name = params[0].second;
 
         try {
             return myApiService.getRandomJoke().execute().getData();
@@ -56,6 +72,10 @@ public class EndpointsAsyncTask extends AsyncTask<Pair<Context, String>, Void, S
 
     @Override
     protected void onPostExecute(String result) {
+        joke = result;
+        if (testing) {
+            return;
+        }
         Intent downloadIntent = new Intent(context, JokeDisplayAvtivity.class);
         downloadIntent.putExtra(JokeDisplayAvtivity.JOKE_INTENT_STRING, JokeProvider.getRandomJoke());
         context.startActivity(downloadIntent);
