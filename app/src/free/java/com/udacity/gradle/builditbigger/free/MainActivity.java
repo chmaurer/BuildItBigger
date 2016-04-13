@@ -1,4 +1,4 @@
-package com.udacity.gradle.builditbigger;
+package com.udacity.gradle.builditbigger.free;
 
 import android.content.Context;
 import android.net.Uri;
@@ -12,6 +12,8 @@ import android.view.View;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.udacity.gradle.builditbigger.EndpointsAsyncTask;
+import com.udacity.gradle.builditbigger.R;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -77,7 +79,7 @@ public class MainActivity extends ActionBarActivity {
                 // Otherwise, set the URL to null.
                 Uri.parse("http://host/path"),
                 // TODO: Make sure this auto-generated app deep link URI is correct.
-                Uri.parse("android-app://com.udacity.gradle.builditbigger.paid/http/host/path")
+                Uri.parse("android-app://com.udacity.gradle.builditbigger.free/http/host/path")
         );
         AppIndex.AppIndexApi.start(client, viewAction);
     }
@@ -96,7 +98,7 @@ public class MainActivity extends ActionBarActivity {
                 // Otherwise, set the URL to null.
                 Uri.parse("http://host/path"),
                 // TODO: Make sure this auto-generated app deep link URI is correct.
-                Uri.parse("android-app://com.udacity.gradle.builditbigger.paid/http/host/path")
+                Uri.parse("android-app://com.udacity.gradle.builditbigger.free/http/host/path")
         );
         AppIndex.AppIndexApi.end(client, viewAction);
         client.disconnect();
