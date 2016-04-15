@@ -1,4 +1,4 @@
-package com.udacity.gradle.builditbigger;
+package com.udacity.gradle.builditbigger.free;
 
 import android.content.Context;
 import android.content.Intent;

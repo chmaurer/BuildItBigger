@@ -70,9 +70,9 @@ dependencies {
     // Added for AdMob
     compile project(':joketeller')
     compile project(':jokedisplayer')
-    freeCompile 'com.google.android.gms:play-services-base:8.4.0'
+    compile 'com.google.android.gms:play-services-base:8.4.0'
     freeCompile 'com.google.android.gms:play-services-ads:8.4.0'
     compile project(path: ':backend', configuration: 'android-endpoints')
-    compile 'com.google.android.gms:play-services-appindexing:8.4.0'
+    freeCompile 'com.google.android.gms:play-services-appindexing:8.4.0'
     compile 'com.android.support:support-v4:23.3.0'
 }

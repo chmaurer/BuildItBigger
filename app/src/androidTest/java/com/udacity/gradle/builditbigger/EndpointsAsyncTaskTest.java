@@ -5,6 +5,7 @@ import android.support.v4.util.Pair;
 import android.test.InstrumentationTestCase;
 
 import com.example.JokeProvider;
+import com.udacity.gradle.builditbigger.free.EndpointsAsyncTask;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;

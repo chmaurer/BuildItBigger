@@ -12,7 +12,6 @@ import android.view.View;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
-import com.udacity.gradle.builditbigger.EndpointsAsyncTask;
 import com.udacity.gradle.builditbigger.R;
 
 
