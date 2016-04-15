@@ -15,6 +15,7 @@ import com.udacity.gradle.builditbigger.R;
 
  Sources Build it bigger
  Sources and Course contents from Udacity courses
+ First review of project
  http://stackoverflow.com/questions/16601299/how-to-create-a-library-project-in-android-studio-and-an-application-project-tha
  http://stackoverflow.com/questions/19294663/cannot-build-android-project-using-android-studio-gradle-1-7
  http://stackoverflow.com/questions/24662801/bad-class-file-magic-or-version
